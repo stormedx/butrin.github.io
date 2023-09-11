@@ -1,0 +1,8 @@
+<h2>Modal Content</h2>
+<div *ngFor="let snippet of data.snippets">
+  <pre>
+    <code>{{ snippet }}</code>
+  </pre>
+  <button (click)="copySnippetToClipboard(snippet)">Copy to Clipboard</button>
+</div>
+<button (click)="closeModal()">Close</button>

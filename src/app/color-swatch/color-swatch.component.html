@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="centered-header">
+    <h1>Butrin</h1>
+  </div>
+</div>
+
+<div class="color-swatch-container">
+  <div class="color-swatch">
+    <!-- First Row (colorsRow1) -->
+    <ng-container *ngFor="let color of colorsRow1">
+      <div class="color-box" (click)="copyToClipboard(color.hex)" [style.backgroundColor]="color.hex">
+        {{ color.hex }}
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="color-swatch-container">
+  <div class="color-swatch">
+    <!-- Second Row (colorsRow2) -->
+    <ng-container *ngFor="let color of colorsRow2">
+      <div class="color-box" (click)="copyToClipboard(color.hex)" [style.backgroundColor]="color.hex">
+        {{ color.hex }}
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="terminal-schemes">
+  <div class="terminal-header">
+  <h1>Add to Your Terminal:</h1>
+  </div>
+</div>
+
+
+<div class="button-container">
+  <button (click)="showCodeBlock('Windows')">Windows Terminal</button>
+  <button (click)="showCodeBlock('Windows')">MacOS Terminal</button>
+  <button (click)="showCodeBlock('Alacritty')">Alacritty</button>
+  <button (click)="showCodeBlock('Windows')">Kitty</button>
+</div>
+
+<div class="terminal-schemes">
